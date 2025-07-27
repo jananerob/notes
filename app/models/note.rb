@@ -1,4 +1,4 @@
 class Note < ApplicationRecord 
-    validates :name, presence: true
-
+    validates :name, length: { in: 3..7 }
+    validates :body, presence: true
 end
