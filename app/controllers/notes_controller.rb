@@ -9,10 +9,11 @@ class NotesController < ApplicationController
     end
 
     def new
+        @note = Note.new
     end
     
     def create
-        @note = Note.create(name: params[:name], body: params[:body])
+        @note = Note.create(name: params[:note][:name], body: params[:note][:body])
 
         redirect_to @note
     end
@@ -24,7 +25,7 @@ class NotesController < ApplicationController
     def update
         @note = Note.find(params[:id])
 
-        @note.update(name: params[:name], body: params[:body])
+        @note.update(name: params[:note][:name], body: params[:note][:body])
 
         redirect_to @note
     end
