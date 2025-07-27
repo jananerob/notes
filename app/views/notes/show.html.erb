@@ -1,4 +1,4 @@
-<h1><%= @note.name %></h1>
-<p><%= @note.body %></p>
+<%= link_to '<- Back to notes', notes_path, class: 'text-sm text-gray-400' %> 
+<h1 class=' mt-1 text-2xl font-semibold'><%= @note.name %></h1>
+<p class='mt-6'><%= @note.body %></p>
 
-<%= link_to 'Back to notes', notes_path %> 
