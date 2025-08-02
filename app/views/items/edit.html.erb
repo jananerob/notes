@@ -1,3 +1,6 @@
-<%= render 'form', submit_text: 'Woohoo, update!' %>
+<h1 class='text-2xl font-semibold'>Editing item</h1>
 
-<%= link_to 'Cancel', @item %> 
+<div class='mt-6'>
+    <%= render 'form', submit_text: 'Woohoo, update!' %>
+</div>
+<%= link_to 'Cancel', @item, class: 'inline-block mt-2' %> 
